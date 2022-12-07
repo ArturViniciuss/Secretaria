@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <html long="PT-BR">
+    <title>Página De Envio</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="shortcut icon" href="icon.png">
+    <script type="text/javascript" src="teste.ejs"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="logo.png" class="">
+            </div>
+            <div class="texto-header">
+                <p>Secretaria de Estado da Saúde do Amazonas (SES-AM)</p>
+                <p>Secretaria Executiva Adjunta de Politicas de Saúde (SEAPS)</p>
+                <p> Departamento de Controle e Avapação Assistencial (DECAV)</p>
+                <p>Gerência de Análise de Contas (GEAC)</p>
+            </div>
+        </div>
+    </header>
+    <main class="main-envio">
+        <!--<div id="imagem-envio"></div>-->
+        <div class="caixa-de-envio">
+            <div class="texto-de-envio">
+                <h3>Envio de Produção</h3>
+                <p>Padrão do Arquivo:<font color="#F30218">[PA|</font>
+                    <font color="#F46000 ">AP|</font>
+                    <font color="#0034F4 ">AA]</font>2211CNESsq
+                </p>
+                <p>Importante: Repertir o número sequencial do arquivo irá substituir o arquivo já enviado que estiver
+                    com a
+                    mesma sequência</p>
+                <p>Você é responsável pelo CORRETO envio dos arquivos de produção</p>
+            </div>
+            <div class="envio-de-arquivo">
+                <form>
+                    <!--<button id="ifile" onclick="addProd();">Adicionar Produção</button>
+                    <button type="button" onclick="precog();" value="">Verificar</button>-->
+                    <input type="file"  name="arquivos[]" multiple="multiple" class="input-envio">
+                    <input type="submit" value="Enviar" class="botao-enviar">
+                </form>
+            </div>
+        </div>
+        <div class="tabela-envio">
+            <table class="tabela-importada">
+                <thead>
+                    <tr>
+                        <th>CMPT</th>
+                        <th>CNES</th>
+                        <th>ARQUIVO</th>
+                        <th>SITUAÇÃO</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <footer>
+        <!--Rodapé-->
+        <div class="rodape">
+            <p> Secretaria de Estado de Saúde do Amazonas
+            <p>
+            <p> &copy; 2022 - Todos os direitos reservados.</p>
+            <p>Av. André Araújo, 701 - Aleixo - CEP: 69.060-000 - Fone: (92) 98417- 4600</p>
+        </div>
+    </footer>
+</body>

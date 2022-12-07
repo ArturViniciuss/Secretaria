@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="/img/favicon.png">
+  <title>Página de Envio</title>
+</head>
+<body>
+
+  <h1>Envio de Produção</h1>
+  <h2>Processamento: NOVEMBRO/2022</h2>
+  <h3>Padrão do Arquivo: [PA|AP|AA]2211CNESsq</h3>
+  <H3>
+    Importante: Repertir o número sequencial do arquivo irá substituir o arquivo já enviado que estiver com a mesma sequência<br>
+    
+  </H3>
+  <h3>Você é responsável pelo CORRETO envio dos arquivos de produção</h3>
+ 
+  <form id="arquivos"></form>
+
+  <div id="fileContents"></div>
+
+  
+  <script type="text/javascript">
+/*     var aprovado = []
+    var controle = 0
+    function addProd2(){
+      var input = '<div class="btn"><input type="file" id="prod_'+controle+'"></input></div><br>';
+      document.getElementById('arquivos').innerHTML += input;
+      controle += 1;
+    }
+*/
+    function addProd(){
+      var input = document.createElement('input');
+      input.type="file";
+      input.accept = '.AGO,.JUL,.JUN,.MAI'; //precisa alterar todo mês
+      //input.onchange = precog();
+      //without this next line, you'll get nuthin' on the display
+      document.getElementById('arquivos').appendChild(input);
+    }
+
+    function precog(){
+      var arquivos = document.getElementById('arquivos');
+      Object.keys(arquivos).forEach(key => {
+        var arquivo = arquivos[key].files[0];
+        if(arquivo) {
+          if(!(arquivo.name.match(/(PA|AP|AA)2211\d{7}\d{2}.(AGO|JUL|JUN|MAI)/g))){ // MUDA TODOS OS MESES
+            console.log("NOME DO ARQUIVO FORA DO PADRÃO");
+          }
+          //console.log(arquivo);
+          var leitor = new FileReader();
+          leitor.readAsText(arquivo, "CP1252");
+          leitor.onload = function (evt) {
+            let ctr = 0
+            let conteudo = evt.target.result.split('\r\n');
+            conteudo.pop();
+            cabecalho = conteudo.shift();
+            conteudo.forEach((lin) => {
+              if(lin.substring(0,2) === '02') {
+                ctr += parseInt(lin.substring(26,36))+parseInt(lin.substring(39,45));
+              }
+              if(lin.substring(0,2) === '03') {
+                ctr += parseInt(lin.substring(49,59))+parseInt(lin.substring(88,94));
+              }
+            });
+            console.log((ctr % 1111) + 1111);
+            //console.log(conteudo);
+            //document.getElementById("fileContents").innerHTML = evt.target.result;
+          }
+          leitor.onerror = function (evt) {
+            console.log('Erro ao ler o arquivo');
+          }
+
+          //leitor.readAsText(arquivo, "CP1252");
+          //console.log(arquivos[key].files);
+        } else {
+
+        }
+//        xhr.open('POST', '/', true);
+//        xhr.send(enviavel);
+      });
+    }
+    </script>
+
+</body>
+</html>

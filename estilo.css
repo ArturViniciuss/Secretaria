@@ -1,0 +1,335 @@
+/*resetando css*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*cabeçalho de todas paginas*/
+
+body{
+    background-image: url(teatro1.jpg);
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-attachment: fixed ;
+    background-position: center;    
+}
+
+header {
+    width: 100%;
+    background: #e2f4f7;
+}
+
+.container {
+    width: 60%;
+    border-bottom: 2px solid #E7F0F9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.logo img {
+    width: 150px;
+}
+
+.texto-header p {
+    text-align: center;
+    /* centralizar*/
+    font-weight: bold;
+    /* colocar negrito */
+    margin: 10px;
+    /*separamento de cada linha entre elas de 10 px*/
+    font-size: 15px;
+    color: #0b08bb;
+}
+
+/*pagina inicial*/
+/*copia*/
+
+/*.main-index{
+    /*background: linear-gradient(gray, white );
+    background: linear-gradient(rgb(175, 232, 241), white );
+}*/
+nav {
+    background-color: #ecff42;
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav li {
+    float: left;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+nav a:hover {
+    /*background: #f1f7ff;*/
+    font-size: 20px;
+    text-decoration: underline;
+    color: #ffd901;
+    
+}
+
+nav a {
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+    color: black;
+    padding: 15px 15px;
+    text-decoration: none;
+}
+
+.login {
+    /*inicial*/
+    /*background-color: #0a960a;*/
+    float: left;
+    transition: 2s background;
+}
+
+.login a {
+    margin: 0 25px;
+}
+
+.login li:hover {
+   /* background: #60ec65;*/
+    font-size: 20px;
+}
+
+.tabela-inicio{
+    padding: 15px 15px 20px 15px;
+    margin: 15px auto;
+    width: 35%;
+    margin-left: 60px; 
+}
+
+h2{
+    font-size: 26px;
+    text-align: center;
+    margin: 10px 0;
+    font-weight: bold;
+    font-family: Calibri ;
+}
+
+thead th{
+    font-family: Montserrat-Medium;
+    font-size: 20px;
+    color: #fff;
+    line-height: 1.4;
+    text-transform: uppercase;
+    background-color: #333;
+    padding-top: 15px;
+    padding-bottom: 16px;
+}
+th{
+    padding: 25px;
+ 
+}
+
+td{
+    padding: 20px;
+    color: #525151;
+    background: white;
+    font-family: Montserrat-Regular;
+    font-size: 14px;
+    text-transform: uppercase;
+    
+}
+
+thead :hover{
+    background: #202020;
+    cursor: pointer ;
+}
+
+td :hover{
+    background: blueviolet;
+    cursor: pointer;
+}
+
+
+
+
+/*
+thead {
+    background-color: #181e31;
+    color: white;
+    font-weight: bold;
+}
+
+td,th {
+    border: 1px solid #000000;
+    padding: 15px;
+}*/
+
+/*pagina de login*/
+
+.main-login{
+   /*background: linear-gradient(gray, white );*/
+    /*background: linear-gradient(rgb(175, 232, 241), white );*/
+}
+
+.caixa-login{
+    /*width: 940px;
+    margin:15px auto;*/
+    width: 900px;
+    padding: 15px 15px;
+    margin: auto
+}
+
+.tela-de-login {
+    background: rgb(243, 243, 243);
+    padding: 70px;
+    width: 50%;
+    margin: auto ;
+    display: flex;
+    justify-content: space-between;
+    border: none;
+    border-radius: 20px;    
+}
+
+.pagina-login{
+    margin: auto;
+}
+
+.pagina-login p { 
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: Tahoma;
+    margin: 20px auto;
+}
+
+.imagem_de_login{
+    margin: 25px auto;
+    display: block;
+    width: 30%;
+}
+
+.input-padrao {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 60px;
+    border: none;
+    border-bottom: 2px solid #c7c4c4;
+}
+
+form label input{
+    margin: 10px auto;
+}
+
+.enviar {
+    width: 100%;
+    display: block;
+    padding: 10px 0;
+    margin: 15px 0;
+    color: rgb(0, 0, 0);
+    background: rgb(80, 214, 255);
+    border-radius: 25px;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    transition: 1s background;
+}
+
+.enviar:hover {
+    background: rgb(4, 140, 158);
+    cursor: pointer;
+}
+
+/*pagina de envio */
+
+.main-envio{
+    display: flex;
+    justify-content:center;   
+    /*background: linear-gradient(gray, white );*/
+    /*background: linear-gradient(rgb(175, 232, 241), white );*/
+
+}
+
+/*#imagem-envio{
+    border: none;
+    height: 100%;
+    pointer-events: none;
+    position: fixed;
+    visibility: hidden;
+    width: 100%;
+}*/
+
+.caixa-de-envio{
+    background-image: url(fundo.png);
+    width: 35%;
+    border: none;
+    border-radius: 20px;
+    margin: 20px;
+    padding: 50px 30px;
+    overflow: hidden;    
+}
+
+.texto-de-envio{
+    font-weight: bold;
+    padding-bottom: 70px ;
+}
+
+h3{
+    text-align: center;
+    font-size: 2em;
+    padding-bottom: 30px;
+    color: white;
+}
+
+.texto-de-envio p{
+    margin: 15px;
+    font-size: 1em;
+    text-align: center;
+    color: wheat;
+}
+
+.envio-de-arquivo {
+    margin: 0 35px
+}
+
+.input-envio{
+    color: white;
+}
+
+input {
+    display: inline;
+    font-weight: bold;
+    padding: 5px;
+    color: black;
+}
+
+.botao-enviar:hover{
+    background: #aca8a8;
+    cursor: pointer;
+}
+.tabela-envio{
+    margin: 21px 20px;
+}
+.tabela-envio table{
+    background-color: white;
+}
+
+/*rodape*/
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;    
+    text-align: center;
+    background: #fafffb;
+    color: #020202;
+    font-size: 10px;
+}
+
+.rodape p {
+    margin: 10px
+}

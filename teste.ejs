@@ -1,0 +1,60 @@
+<script type="text/javascript">
+    /*     var aprovado = []
+        var controle = 0
+        function addProd2(){
+          var input = '<div class="btn"><input type="file" id="prod_'+controle+'"></input></div><br>';
+          document.getElementById('arquivos').innerHTML += input;
+          controle += 1;
+        }
+    */
+        function addProd(){
+          var input = document.createElement('input');
+          input.type="file";
+          input.accept = '.AGO,.JUL,.JUN,.MAI'; //precisa alterar todo mês
+          //input.onchange = precog();
+          //without this next line, you'll get nuthin' on the display
+          document.getElementById('arquivos').appendChild(input);
+        }
+    
+        function precog(){
+          var arquivos = document.getElementById('arquivos');
+          Object.keys(arquivos).forEach(key => {
+            var arquivo = arquivos[key].files[0];
+            if(arquivo) {
+              if(!(arquivo.name.match(/(PA|AP|AA)2211\d{7}\d{2}.(AGO|JUL|JUN|MAI)/g))){ // MUDA TODOS OS MESES
+                console.log("NOME DO ARQUIVO FORA DO PADRÃO");
+              }
+              //console.log(arquivo);
+              var leitor = new FileReader();
+              leitor.readAsText(arquivo, "CP1252");
+              leitor.onload = function (evt) {
+                let ctr = 0
+                let conteudo = evt.target.result.split('\r\n');
+                conteudo.pop();
+                cabecalho = conteudo.shift();
+                conteudo.forEach((lin) => {
+                  if(lin.substring(0,2) === '02') {
+                    ctr += parseInt(lin.substring(26,36))+parseInt(lin.substring(39,45));
+                  }
+                  if(lin.substring(0,2) === '03') {
+                    ctr += parseInt(lin.substring(49,59))+parseInt(lin.substring(88,94));
+                  }
+                });
+                console.log((ctr % 1111) + 1111);
+                //console.log(conteudo);
+                //document.getElementById("fileContents").innerHTML = evt.target.result;
+              }
+              leitor.onerror = function (evt) {
+                console.log('Erro ao ler o arquivo');
+              }
+    
+              //leitor.readAsText(arquivo, "CP1252");
+              //console.log(arquivos[key].files);
+            } else {
+    
+            }
+    //        xhr.open('POST', '/', true);
+    //        xhr.send(enviavel);
+          });
+        }
+        </script>
