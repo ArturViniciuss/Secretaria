@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <html long="PT-BR">
+    <meta name="viewport" content="width=device-width">
     <title>Página De Login</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="estilo.css">
@@ -42,8 +43,7 @@
 
                         <label><input type="checkbox"> Lembrar do CNES</label>
 
-                        <input type="submit" value="Entrar" class="enviar">
-                    </form>
+                        <button type="submit" value="Entrar" class="enviar">Entrar</button>
                 </div>
             </div>
         </div>
@@ -57,6 +57,25 @@
             <p>Av. André Araújo, 701 - Aleixo - CEP: 69.060-000 - Fone: (92) 98417- 4600</p>
         </div>
     </footer>
-</body>
+    <script type="text/javascript">
+        // var logincadastrado = "adm";
+        // var senhacadastrada = "adm";
+        var id = document.getElementById("cnes");
+        var senha = document.getElementById("senha");
+        id.focus();
+        function login(){
+            if ("adm" == id.value && "adm" == senha.value) {
+                alert("Bem-Vindo");
+                
+            }else{
+                alert("Senha ou Usuario errado");
+            }
+            id.focus();
 
+        }
+        var button = document.querySelector("button");
+        button.onclick = login;
+    </script>
+    
+</body>
 </html>
